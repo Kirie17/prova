@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>ValidadorUsuarioTest.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ValidadorUsuarioTest.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import static </span><span class="s1">org</span><span class="s2">.</span><span class="s1">junit</span><span class="s2">.</span><span class="s1">Assert</span><span class="s2">.</span><span class="s1">assertFalse</span><span class="s2">;</span>
+<span class="s0">import static </span><span class="s1">org</span><span class="s2">.</span><span class="s1">junit</span><span class="s2">.</span><span class="s1">Assert</span><span class="s2">.</span><span class="s1">assertTrue</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">junit</span><span class="s2">.</span><span class="s1">Test</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">ValidadorUsuarioTest </span><span class="s2">{</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">testEmailValido</span><span class="s2">() {</span>
+
+        <span class="s1">String emailValido </span><span class="s2">= </span><span class="s3">&quot;email@dominio.com&quot;</span><span class="s2">;</span>
+        <span class="s1">assertTrue</span><span class="s2">(</span><span class="s1">ValidadorUsuario</span><span class="s2">.</span><span class="s1">validarEmail</span><span class="s2">(</span><span class="s1">emailValido</span><span class="s2">));</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">testEmailInvalidoSemArroba</span><span class="s2">() {</span>
+
+        <span class="s1">String emailInvalido </span><span class="s2">= </span><span class="s3">&quot;email.com&quot;</span><span class="s2">;</span>
+        <span class="s1">assertFalse</span><span class="s2">(</span><span class="s1">ValidadorUsuario</span><span class="s2">.</span><span class="s1">validarEmail</span><span class="s2">(</span><span class="s1">emailInvalido</span><span class="s2">));</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">testEmailInvalidoFormato</span><span class="s2">() {</span>
+
+        <span class="s1">String emailInvalido </span><span class="s2">= </span><span class="s3">&quot;email@dominio&quot;</span><span class="s2">;</span>
+        <span class="s1">assertFalse</span><span class="s2">(</span><span class="s1">ValidadorUsuario</span><span class="s2">.</span><span class="s1">validarEmail</span><span class="s2">(</span><span class="s1">emailInvalido</span><span class="s2">));</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
